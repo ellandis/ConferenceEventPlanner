@@ -1,12 +1,15 @@
+import React from "react";
+import "./LandingPage.css";
+
 const LandingPage = () => {
   return (
     <>
       <div className="lpFormat">
-        <p>Conference_Expense Landing page</p>
-        <p>Plan your next major event with us!</p>
-        <button>Get Started</button>
-      </div>
-      <div>
+        <div className="left">
+          <p>Conference_Expense Landing page</p>
+          <p>Plan your next major event with us!</p>
+          <button>Get Started</button>
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
