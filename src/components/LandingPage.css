@@ -6,21 +6,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    border: 2px, solid, blue;
+    border: 2px, solid, #51b3f4;
+    background-color: #eef5d9;
     border-radius: 3px;
-    width: 50%;
-    max-width: fit-content;
     gap: 20px;
     padding: 20px;
-    justify-content: center;
+    justify-content: center;  
+    align-items: center;  
 }
 
 .item {
-    background: #3498db;
+    background: #51b3f4;
     color: white;
     border-radius: 6px;
     padding: 5px 10px;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
     font-size: x-large;
+    text-wrap:balance;
     width: 400px;
 }
