@@ -2,32 +2,37 @@ import React, { useState } from "react";
 import "./LandingPage.css";
 
 const LandingPage = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
-  const [showPopup, setShowPopup] = useState(true);
-  
-  const handleLandingPage = () =>{
-    setShowPopup(!showPopup);
-  }
+  const handleLandingPage = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
-    
-    <div className="lpFormat">
-      <div className="item">
-        <p>Conference_Expense Landing page</p>
-        <p>Plan your next major event with us!</p>
-        <button onClick={handleLandingPage}>Get Started</button>
-      </div>
-      <div className="item">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+    <div>
+      {isVisible && 
+        <div className="lpFormat">
+          <div className="item">
+            <p>EventVerse Strategies</p>
+            <p>Plan your next major event with us!</p>
+            <button onClick={handleLandingPage}>Get Started</button>
+          </div>
+          <div className="item">
+            <p>
+              EventVerse Strategies is a cutting-edge conference and event
+              planning agency that specializes in transforming professional
+              gatherings into immersive, high-impact experiences. From tech
+              summits and leadership retreats to hybrid expos and executive
+              networking soirées, EventVerse brings innovation and precision to
+              every detail. The team combines data-driven planning, seamless
+              logistics, and dynamic branding to elevate client engagement and
+              ROI. With custom app integrations, AI-powered scheduling tools,
+              and creative design teams, EventVerse delivers events that are not
+              just well-organized—but unforgettable.
+            </p>
+          </div>
+        </div>
+      }
     </div>
   );
 };
