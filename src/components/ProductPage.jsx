@@ -12,6 +12,7 @@ const ProductPage = () => {
         <a href="venue">Venue</a>
         <a href="addons">Add-ons</a>
         <a href="meals">Meals</a>
+        <button>Show Details</button>
       </nav>
     <p>
         <p>
