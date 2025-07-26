@@ -1,9 +1,18 @@
-
+import './ProductPage.css';
 
 const ProductPage = () => {
   
   
     return (
+      <div>
+
+      
+      <nav className="navbar">
+        <h1>EventVerse Strategies</h1>
+        <a href="venue">Venue</a>
+        <a href="addons">Add-ons</a>
+        <a href="meals">Meals</a>
+      </nav>
     <p>
         <p>
       Product selection page After selecting Get Started, the application should
@@ -41,6 +50,7 @@ const ProductPage = () => {
     </p>
       
     </p>
+    </div>
   );
 };
 
