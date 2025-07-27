@@ -12,10 +12,19 @@ const ProductPage = () => {
   return (
     <div>
       
-      <div className="product-list">
+      <div >
       <h1 className="mainTitle">Venue Room Selection</h1>
+      <div className="product-list"></div>
+        {
+          products.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src="" alt="" className="product-img"/>
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
 
-
+              </div>
+          ))
+        }
       </div>
       <p>
         <p>
@@ -33,6 +42,7 @@ const ProductPage = () => {
           page. Room selection and navigation bar Users select from 5 room
           types:
         </p>
+
 
         <ul>
           <li>hall – capacity 200, $5500 ea </li>
