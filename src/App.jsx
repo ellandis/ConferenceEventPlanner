@@ -9,9 +9,14 @@ function App() {
     <>
       <Nav/>
       <LandingPage />
-      <ProductPage />
+      <ProductPage id="venue" />
+      
     </>
   );
 }
+// Tan #b68d40 Cream #f4ebd0 Charcoal #122620 Gold #d6ad60
+
+
+
 
 export default App;
