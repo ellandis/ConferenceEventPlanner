@@ -1,8 +1,4 @@
-.navbar {
-  display: flex;
-  background-color: #b68d40;
-  justify-content: space-evenly;
-}
+
 a {
   padding-top: 20px;
   text-decoration: none;
@@ -22,7 +18,7 @@ a {
     text-align: center;
 }
 
-.product-list {
+.product-list-items {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -30,7 +26,7 @@ a {
   ); /* flexible column layout */
   gap: 10px; 
   padding: 10px;
-  border: 10px solid black;
+  border: 10px solid #f4ebd0;
 }
 
 .quantity{

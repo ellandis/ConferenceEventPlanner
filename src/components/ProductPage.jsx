@@ -16,7 +16,7 @@ const ProductPage = () => {
   return (
     <div className="product-box">
         <h1 className="mainTitle">Venue Room Selection</h1>
-        <div className="product-list">
+        <div className="product-list-items">
             {products.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.img} alt="" className="product-img" />
@@ -25,7 +25,7 @@ const ProductPage = () => {
               <p>{product.price}</p>
               <div className="quantity">
               <button>-</button>
-              <p>quantity </p>
+              <p>{} </p>
               <button>+</button>
               </div>
             </div>

@@ -1,0 +1,5 @@
+.navbar {
+    display: flex;
+    background-color: #b68d40;
+    justify-content: space-evenly;
+  }
