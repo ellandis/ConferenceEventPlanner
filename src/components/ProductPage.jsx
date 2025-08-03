@@ -4,8 +4,17 @@ import ConfImg from '../assets/conference.jpeg'
 import PresImg from '../assets/presentation.jpeg'
 import LargeImg from '../assets/large.jpeg'
 import SmallImg from '../assets/small.jpeg'
+import { useDispatch, useSelector } from "react-redux";
+import {addItemToCart} from './CartSlice';
 
 const ProductPage = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart.cartItems);
+
+  const handleAddToCart = (product) => {
+    dispatch(addItemToCart(product))
+  }
+
   const products = [
     { id: 1, name: "Hall room", price: 5500, img: HallImg },
     { id: 2, name: "Conference room", price: 3500, img: ConfImg },
@@ -13,6 +22,9 @@ const ProductPage = () => {
     { id: 4, name: "Large room", price: 900, img: LargeImg  },
     { id: 5, name: "Small room", price: 1100, img: SmallImg  },
   ];
+
+
+
   return (
     <div className="product-box">
         <h1 className="mainTitle">Venue Room Selection</h1>
@@ -26,7 +38,7 @@ const ProductPage = () => {
               <div className="quantity">
               <button>-</button>
               <p>{} </p>
-              <button>+</button>
+              <button onClick={handleAddToCart(product.name)}>+</button>
               </div>
             </div>
           ))}
