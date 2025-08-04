@@ -36,9 +36,15 @@ const ProductPage = () => {
               <h3>{product.name}</h3>
               <p>{product.price}</p>
               <div className="quantity">
+<<<<<<< HEAD
               <button>-</button>
               <p>{} </p>
               <button onClick={handleAddToCart(product.name)}>+</button>
+=======
+              <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>
+              <p>{product.quantity} </p>
+              <button onClick={() => handleIncreaseQuantity(item.id)}>+</button>
+>>>>>>> acc8478 (working on redux control)
               </div>
             </div>
           ))}
