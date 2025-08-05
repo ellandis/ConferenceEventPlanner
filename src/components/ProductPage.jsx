@@ -16,18 +16,63 @@ const ProductPage = () => {
   }
 
   const products = [
-    { id: 1, name: "Hall room", price: 5500, img: HallImg },
-    { id: 2, name: "Conference room", price: 3500, img: ConfImg },
-    { id: 3, name: "Presentation room", price: 700, img: PresImg },
-    { id: 4, name: "Large room", price: 900, img: LargeImg  },
-    { id: 5, name: "Small room", price: 1100, img: SmallImg  },
-  ];
+  { id: 1, name: "Hall room", price: 5500, img: HallImg },
+  { id: 2, name: "Conference room", price: 3500, img: ConfImg },
+  { id: 3, name: "Presentation room", price: 700, img: PresImg },
+  { id: 4, name: "Large room", price: 900, img: LargeImg },
+  { id: 5, name: "Small room", price: 1100, img: SmallImg },
+  { id: 6, name: "Speakers", price: 35, img: SpeakersImg },
+  { id: 7, name: "Microphones", price: 45, img: MicrophonesImg },
+  { id: 8, name: "Whiteboards", price: 80, img: WhiteboardsImg },
+  { id: 9, name: "Projectors", price: 200, img: ProjectorsImg },
+  { id: 10, name: "Signage", price: 80, img: SignageImg },
+  { id: 11, name: "Breakfast", price: 50, img: BreakfastImg },
+  { id: 12, name: "Lunch", price: 60, img: LunchImg },
+  { id: 13, name: "High tea", price: 25, img: HighTeaImg },
+  { id: 14, name: "Dinner", price: 70, img: DinnerImg },
+];
 
 
 
   return (
+    <>
+    
     <div className="product-box">
         <h1 className="mainTitle">Venue Room Selection</h1>
+        <div className="product-list-items">
+            {products.map((product) => (
+              <div key={product.id} className="product-card">
+              <img src={product.img} alt="" className="product-img" />
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+              <div className="quantity">
+              <button >-</button>
+              <p>{product.quantity}</p>
+              <button >+</button>
+              </div>
+            </div>
+          ))}
+        </div>
+    </div>
+    <div className="addon-box">
+        <h1 className="mainTitle">Add on Selection</h1>
+        <div className="product-list-items">
+            {products.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.img} alt="" className="product-img" />
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+              <div className="quantity">
+              <button >-</button>
+              <p>{product.quantity}</p>
+              <button >+</button>
+              </div>
+            </div>
+          ))}
+        </div>
+    </div>
+    <div className="Meals-box">
+        <h1 className="mainTitle">Meals Selection</h1>
         <div className="product-list-items">
             {products.map((product) => (
             <div key={product.id} className="product-card">
@@ -36,15 +81,15 @@ const ProductPage = () => {
               <h3>{product.name}</h3>
               <p>{product.price}</p>
               <div className="quantity">
-              <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>
-              <p>{product.quantity} </p>
-              <button onClick={() => handleIncreaseQuantity(item.id)}>+</button>
+              <button >-</button>
+              <p>{product.quantity}</p>
+              <button >+</button>
               </div>
             </div>
           ))}
         </div>
-      
     </div>
+    </>
   );
 };
 

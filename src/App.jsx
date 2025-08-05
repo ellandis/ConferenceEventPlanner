@@ -5,6 +5,7 @@ import React from "react";
 import Nav from "./components/Nav.jsx";
 import Addon from "./components/Addon.jsx";
 import Meals  from "./components/Meals.jsx";
+import ShoppingCart from "./components/shoppingCart.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ProductPage />
       <Addon/>
       <Meals/>
+      <ShoppingCart/>
     </>
   );
 }
