@@ -36,7 +36,6 @@ const ProductPage = () => {
 
   return (
     <>
-    
     <div className="product-box">
         <h1 className="mainTitle">Venue Room Selection</h1>
         <div className="product-list-items">
