@@ -18,13 +18,15 @@ a {
     text-align: center;
 }
 
+.product-img{
+  height: 250px;
+  width: 250px;
+}
+
 .product-list-items {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* flexible column layout */
-  gap: 10px; 
+  grid-template-columns: repeat(4, 600px);
+  gap: 40px; 
   padding: 10px;
   border: 10px solid #f4ebd0;
 }

@@ -52,7 +52,7 @@ const meals = [
 
   return (
     <>
-    <div className="product-box">
+    <div className="product-box" id="venue">
         <h1 className="mainTitle">Venue Room Selection</h1>
         <div className="product-list-items">
             {products.map((product) => (
@@ -69,10 +69,10 @@ const meals = [
           ))}
         </div>
     </div>
-    <div className="addon-box">
+    <div className="product-box" id="addons">
         <h1 className="mainTitle">Add on Selection</h1>
         <div className="product-list-items">
-            {products.map((product) => (
+            {addons.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.img} alt="" className="product-img" />
               <h3>{product.name}</h3>
@@ -86,10 +86,10 @@ const meals = [
           ))}
         </div>
     </div>
-    <div className="Meals-box">
+    <div className="product-box" id="meals">
         <h1 className="mainTitle">Meals Selection</h1>
         <div className="product-list-items">
-            {products.map((product) => (
+            {meals.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.img} alt="" className="product-img" />
               
