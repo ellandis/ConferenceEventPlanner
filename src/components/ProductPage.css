@@ -25,7 +25,7 @@ a {
 
 .product-list-items {
   display: grid;
-  grid-template-columns: repeat(4, 600px);
+  grid-template-columns: repeat(auto-fill, 500px);
   gap: 40px; 
   padding: 10px;
   border: 10px solid #f4ebd0;
