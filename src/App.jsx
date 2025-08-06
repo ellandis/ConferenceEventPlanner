@@ -3,7 +3,7 @@ import "./App.css";
 import ProductPage from "./components/ProductPage.jsx";
 import React from "react";
 import Nav from "./components/Nav.jsx";
-import ShoppingCart from "./components/shoppingCart.jsx";
+import ShoppingCart from "./components/ShoppingCart.jsx";
 
 function App() {
   return (

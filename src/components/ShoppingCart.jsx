@@ -27,7 +27,7 @@ const ShoppingCart = () => {
             <ul className="cart-items">
                 {cartItems.map( item => (
                     <li key={item.id}>
-                        {item.name}
+                        {item.name} - {item.quantity}
                     </li>
                 ))}
             </ul>
