@@ -14,7 +14,7 @@ import LunchImg from "../assets/lunch.jpg";
 import HighTeaImg from "../assets/hightea.jpg";
 import DinnerImg from "../assets/dinner.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemToCart, decreaseItemQty } from "./CartSlice";
+import { addItemToCart, remove1ItemFromCart } from "./CartSlice";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
@@ -55,9 +55,10 @@ const ProductPage = () => {
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product));
   };
-  const handleDecreaseQty = (productId) => {
-    dispatch(decreaseItemQty(productId))
-  }
+  const handleRemoveFromCartby1 = (product) => {
+    dispatch(remove1ItemFromCart(product));
+  };
+  
 
   const products = [
     { id: 1, name: "Hall room", price: 5500, img: HallImg },
@@ -93,14 +94,14 @@ const ProductPage = () => {
               <h3>{item.name}</h3>
               <p>{item.price}</p>
               <div className="quantity">
-                <button onClick={() => handleDecreaseQty(item.id)} >-</button>
+                <button onClick={() => handleRemoveFromCartby1(item)}>-</button>
                 <p>{item.quantity}</p>
                 <button onClick={() => handleAddToCart(item)}>+</button>
               </div>
             </div>
           ))}
         </div>
-        <div className="total">{venueCart}</div>
+        <div className="total">Total Cost ${venueCart}</div>
       </div>
       {/* <div className="product-box" id="addons">
         <h1 className="mainTitle">Add on Selection</h1>

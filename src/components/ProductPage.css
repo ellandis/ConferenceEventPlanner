@@ -48,5 +48,7 @@ a {
 .total{
   background-color: #d6ad60;
   width: 300px;
-  margin: 0 auto;
+  height: 100px;
+  margin: 50px 800px;
+  
 }
