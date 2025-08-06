@@ -19,6 +19,12 @@ import {addItemToCart} from './CartSlice';
 const ProductPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart.cartItems);
+  const venueCart [];
+  const addonCart [];
+  const mealCart [];
+  const venueTotals = ;
+  const addonsTotals;
+  const mealsTotals;
 
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product))
@@ -55,14 +61,14 @@ const meals = [
     <div className="product-box" id="venue">
         <h1 className="mainTitle">Venue Room Selection</h1>
         <div className="product-list-items">
-            {products.map((product) => (
-              <div key={product.id} className="product-card">
-              <img src={product.img} alt="" className="product-img" />
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
-              <div className="quantity">
+            {products.map((item) => (
+              <div key={item.id} className="product-card">
+              <img src={item.img} alt="" className="product-img" />
+              <h3>{item.name}</h3>
+              <p>{item.price}</p>
+              <div className="quantity"> 
               <button >-</button>
-              <p>{product.quantity}</p>
+              <p>{item.quantity}</p>
               <button >+</button>
               </div>
             </div>
@@ -72,14 +78,14 @@ const meals = [
     <div className="product-box" id="addons">
         <h1 className="mainTitle">Add on Selection</h1>
         <div className="product-list-items">
-            {addons.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt="" className="product-img" />
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
+            {addons.map((item) => (
+            <div key={item.id} className="product-card">
+              <img src={item.img} alt="" className="product-img" />
+              <h3>{item.name}</h3>
+              <p>{item.price}</p>
               <div className="quantity">
               <button >-</button>
-              <p>{product.quantity}</p>
+              <p>{item.quantity}</p>
               <button >+</button>
               </div>
             </div>
@@ -89,15 +95,15 @@ const meals = [
     <div className="product-box" id="meals">
         <h1 className="mainTitle">Meals Selection</h1>
         <div className="product-list-items">
-            {meals.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt="" className="product-img" />
+            {meals.map((item) => (
+            <div key={item.id} className="product-card">
+              <img src={item.img} alt="" className="product-img" />
               
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
+              <h3>{item.name}</h3>
+              <p>{item.price}</p>
               <div className="quantity">
               <button >-</button>
-              <p>{product.quantity}</p>
+              <p>{item.quantity}</p>
               <button >+</button>
               </div>
             </div>
