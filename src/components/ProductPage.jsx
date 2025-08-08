@@ -43,14 +43,6 @@ const ProductPage = () => {
     return total;
   }, 0);
   
-  // use venueCart directly — it's just a number
-  
-  // const addonCart [];
-  // const mealCart [];
-
- 
-  // const addonsTotals;
-  // const mealsTotals;
 
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product));
@@ -103,7 +95,7 @@ const ProductPage = () => {
         </div>
         <div className="total">Total Cost ${venueCart}</div>
       </div>
-      {/* <div className="product-box" id="addons">
+      <div className="product-box" id="addons">
         <h1 className="mainTitle">Add on Selection</h1>
         <div className="product-list-items">
             {addons.map((item) => (
@@ -112,15 +104,16 @@ const ProductPage = () => {
               <h3>{item.name}</h3>
               <p>{item.price}</p>
               <div className="quantity">
-              <button >-</button>
+              <button onClick={() => handleRemoveFromCartby1(item)}>-</button>
               <p>{item.quantity}</p>
-              <button >+</button>
+              <button onClick={() => handleAddToCart(item)} >+</button>
               </div>
             </div>
           ))}
         </div>
-    </div> */}
-      {/* <div className="product-box" id="meals">
+        <div className="total">Total Cost ${addonCart}</div>
+    </div>
+      <div className="product-box" id="meals">
         <h1 className="mainTitle">Meals Selection</h1>
         <div className="product-list-items">
             {meals.map((item) => (
@@ -130,14 +123,17 @@ const ProductPage = () => {
               <h3>{item.name}</h3>
               <p>{item.price}</p>
               <div className="quantity">
-              <button >-</button>
+              <button onClick={() => handleRemoveFromCartby1(item)} >-</button>
               <p>{item.quantity}</p>
-              <button >+</button>
+              <button onClick={() => handleAddToCart(item)} >+</button>
               </div>
             </div>
           ))}
         </div>
-    </div> */}
+          <div className="total">Total Cost ${mealCart}</div>
+    
+    
+    </div>
     </>
   );
 };
