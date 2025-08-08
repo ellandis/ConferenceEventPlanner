@@ -131,9 +131,7 @@ const ProductPage = () => {
           ))}
         </div>
           <div className="total">Total Cost ${mealCart}</div>
-    
-    
-    </div>
+      </div>
     </>
   );
 };
