@@ -11,7 +11,6 @@ const ShoppingCart = () => {
     <>
       <div className="shopping-cart">
         <h1>Amount Due ${totalAmount}.</h1>
-
         <ul className="cart-items">
           {cartItems.map((item) => (
             <li key={item.id}>
@@ -19,6 +18,8 @@ const ShoppingCart = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div>
       </div>
     </>
   );
